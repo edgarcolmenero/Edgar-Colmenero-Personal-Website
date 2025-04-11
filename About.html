@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Edgar Colmenero</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Transition for each section */
+        .experience-container {
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Slightly lower */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition effect */
+        }
+
+        .experience-visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Reset position */
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">Experience</a></li>
+                <li><a href="Skills.html">Aspirations</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main heading -->
+    <h3 style="text-align: center; background-color: #001f3f; color: #f3f3f3; text-decoration: underline; padding: 10px;">Edgar Colmenero's Background Experience</h3>
+
+    <section id="experience1" class="light-grey">
+        <div class="experience-container">
+            <a href="https://bnhs.nisdtx.org/" target="_blank">
+                <img src="Byron Nelson 2.jpg" alt="Byron Nelson High School" class="experience-image white-border-navy-shadow">
+            </a>
+            <div class="experience-text">
+                <h2>Byron Nelson Highschool - Highschool Diploma</h2>
+                <p>I earned my high school diploma from Byron Nelson High School, a school that provided me with an exceptional educational experience. The modern facilities, safe environment, and supportive teachers created an ideal setting for academic and personal growth. The school’s dedication to excellence was evident, from the clean, well-maintained campus to the kindness of the staff. I am grateful for the welcoming community I found at Byron Nelson and the foundation it gave me for my future.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience2" class="navy-blue">
+        <div class="experience-container">
+            <a href="https://www.tccd.edu" target="_blank">
+                <img src="download 2.jpg" alt="Tarrant County College" class="experience-image navy-border-white-shadow">
+            </a>
+            <div class="experience-text">
+                <h2>Tarrant County College - Computer Science Transfer</h2>
+                <p>I am currently in my final semester at Tarrant County College's Trinity River Campus, where I’ve benefited from a wide range of student services. The campus offers free tutoring, ample parking, affordable classes, and approachable professors who have been instrumental in my academic journey. The presence of a dedicated campus police office further enhances the sense of safety and community. My time at TCC has been marked by a strong support network and an enriching learning environment.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience3" class="light-grey">
+        <div class="experience-container">
+            <a href="https://www.uta.edu" target="_blank">
+                <img src="UTA.jpg" alt="University of Texas at Arlington" class="experience-image white-border-navy-shadow">
+            </a>
+            <div class="experience-text">
+                <h2>University of Texas at Arlington - Computer Science Major</h2>
+                <p>Looking ahead, I am eager to begin my studies at the University of Texas at Arlington in the fall of 2025. UTA stands out for its diverse and welcoming community, highly regarded academic programs, and excellent services and amenities. I am excited to immerse myself in this new chapter and to take advantage of the opportunities that come with being part of such a prestigious university. The thought of joining UTA fills me with excitement and motivation as I continue to strive for excellence.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience4" class="navy-blue">
+        <div class="experience-container">
+            <a href="https://www.wellsfargo.com" target="_blank">
+                <img src="Wells Fargo.jpg" alt="Wells Fargo" class="experience-image navy-border-white-shadow">
+            </a>
+            <div class="experience-text">
+                <h2>Wells Fargo - Bilingual Financial Services Representative</h2>
+                <p>At Wells Fargo, I worked as a Bilingual Financial Services Representative, serving a diverse clientele and refining my customer service skills. In this role, I handled a variety of financial transactions, provided personalized support to customers, and utilized my bilingual abilities to assist Spanish-speaking clients. This experience helped me develop strong attention to detail, the ability to work under pressure, and the capacity to build trust with customers.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience5" class="light-grey">
+        <div class="experience-container">
+            <a href="https://www.walmart.com" target="_blank">
+                <img src="Walmart.jpg" alt="Walmart" class="experience-image white-border-navy-shadow">
+            </a>
+            <div class="experience-text">
+                <h2>Walmart - Electronics/Seasonal Team Lead</h2>
+                <p>At Walmart, I held the position of Team Lead, where I honed my leadership and organizational skills in a fast-paced environment. I was responsible for managing team dynamics, ensuring efficient operations, and delivering excellent customer service. My time at Walmart taught me valuable lessons in communication, teamwork, and problem-solving, all of which have shaped me into a more adaptable and effective leader.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p> © 2024 Data Scientist Edgar Colmenero "Never Stay Satisfied"</p>
+    </footer>
+
+    <script>
+        // JavaScript to add the transition effect
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".experience-container");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("experience-visible"); // Add the visible class when in view
+                    }
+                });
+            });
+
+            sections.forEach(section => {
+                observer.observe(section); // Observe each section
+            });
+        });
+    </script>
+
+<script>
+    // Select all experience containers
+    const experienceContainers = document.querySelectorAll('.experience-container');
+
+    // Create an intersection observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('experience-visible'); // Add class to make visible
+                observer.unobserve(entry.target); // Stop observing once visible
+            }
+        });
+    });
+
+    // Observe each container
+    experienceContainers.forEach(container => {
+        observer.observe(container);
+    });
+</script>
+
+
+</body>
+</html>

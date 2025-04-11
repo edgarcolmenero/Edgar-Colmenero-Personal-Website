@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Edgar Colmenero</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link back to the home page -->
+                <li><a href="About.html">Experience</a></li>
+                <li><a href="Skills.html">Aspirations</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li> <!-- Current page -->
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="myportfolio" class="reveal">
+        <h2>My Portfolio</h2>
+        <p>Here are some of the projects I am currently working on:</p>
+        <div class="project">
+            <h3>Edgar Colmenero's Personal App</h3>
+            <p>In Progress, Coming Soon...</p>
+            <a href="link_to_project_1" target="_blank" class="navy-link">Almost here...</a>
+        </div>
+        <div class="project">
+            <h3>PTC Productions App</h3>
+            <p>In Progress, Coming Soon...</p>
+            <a href="link_to_project_1" target="_blank" class="navy-link">Almost here...</a>
+        </div>
+    </section>
+    
+
+    <script>
+        window.addEventListener('load', function() {
+            const portfolioSection = document.getElementById('portfolio');
+            portfolioSection.classList.add('visible');
+        });
+    </script>
+    
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+    
+        const appearOnScroll = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // remove if you want to animate only once
+                    }
+                });
+            },
+            {
+                threshold: 0.1 // trigger when 10% visible
+            }
+        );
+    
+        reveals.forEach(section => {
+            appearOnScroll.observe(section);
+        });
+    </script>
+    
+
+    <footer>
+        <p>© 2024 Data Scientist Edgar Colmenero "Never Stay Satisfied"</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Edgar Colmenero</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link back to the home page -->
+                <li><a href="About.html">Experience</a></li>
+                <li><a href="Skills.html">Aspirations</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Contact.html">Contact</a></li> <!-- Current page -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you’d like to get in touch, feel free to reach out via the options below:</p>
+        <ul>
+            <li><span class="contact-label">Email:</span> <a href="mailto:EdgarColmenero15@gmail.com" class="contact-link">EdgarColmenero15@gmail.com</a></li>
+            <li><span class="contact-label">LinkedIn:</span> <a href="https://www.linkedin.com/in/edgar-colmenero-385b6125b" target="_blank" class="contact-link">Edgar Colmenero's LinkedIn Profile</a></li>
+            <li><span class="contact-label">Phone:</span> <a href="tel:+18175033500" class="contact-link">+1 (817) 503-3500</a></li>
+        </ul>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media">
+        <div class="social-media-container">
+            <div class="social-media-item">
+                <a href="https://www.snapchat.com/add/edgarcolmeneroo">
+                    <img src="Snapchat.jpg" alt="Snapchat">
+                    <p>@edgarcolmeneroo</p>
+                </a>
+            </div>
+            <div class="social-media-item">
+                <a href="https://www.tiktok.com/@edgarcolmeneroo">
+                    <img src="Tiktok.jpg" alt="TikTok">
+                    <p>@edgarcolmeneroo</p>
+                </a>
+            </div>
+            <div class="social-media-item">
+                <a href="https://www.instagram.com/edgarcolmenero">
+                    <img src="Instagram.jpeg" alt="Instagram">
+                    <p>@edgarcolmenero</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- New Image Section Below Social Media -->
+<!-- New Banner Section with Three Images -->
+<section id="banner-section">
+    <img class="banner-image" src="NSS.jpg" alt="Left Image">
+    <img class="banner-image" src="NSS.jpg" alt="Center Image">
+    <img class="banner-image" src="NSS.jpg" alt="Right Image">
+</section>
+
+<script>
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            document.getElementById('contact').classList.add('visible');
+            document.getElementById('social-media').classList.add('visible');
+            document.getElementById('banner-section').classList.add('visible');
+        }, 200); // Delay slightly for smooth effect
+    });
+</script>
+
+
+
+    <footer>
+        <p>© 2024 Data Scientist Edgar Colmenero "Never Stay Satisfied"</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">Experience</a></li>
+                <li><a href="Skills.html">Aspirations</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Apply the fade-in effect to sections -->
+    <section id="welcome" class="fade-in">
+        <h1>Welcome to Edgar Colmenero's Website</h1>
+        <img src="IMG_3594.jpg" alt="Edgar Colmenero" id="profile-image">
+        <p>Never Stay Satisfied!</p>
+    </section>
+
+    <section id="about" class="fade-in">
+        <div class="about-container">
+            <img src="Me.jpg" alt="College Image" class="college-image">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hello, my name is Edgar Colmenero. I am currently a student at 
+                    Tarrant County College, and I plan to transfer to the 
+                    University of Texas at Arlington in the Fall of 2025 to pursue 
+                    a degree in Computer Science. I have a strong passion for mobile 
+                    and web development and possess knowledge in HTML, CSS, iOS, Java, and Python. 
+                    I am eager to expand my skill set further. My aspiration is to become a 
+                    distinguished Software Developer in the future.  
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="myskills" class="fade-in">
+        <div class="skills-container">
+            <img src="Coder.jpg" alt="Skills Image" class="skills-image">
+            <div class="skills-text">
+                <h2>My Skills and Interests</h2>
+                <p>My skills and interests are deeply rooted in my love for sports and fitness, which have instilled in me essential traits like discipline, teamwork, and resilience—qualities that drive me in my quest to become the best version of myself. I have a strong passion for coding and a continuous desire to expand my knowledge of programming languages such as JavaScript, Python, and Swift, all while honing my expertise in HTML and CSS. Creating websites and apps excites me, whether it’s for personal enjoyment or to support the growth of small businesses, as I truly believe in making a positive impact. My role as a Bilingual Financial Services Representative at Wells Fargo has enhanced my customer service abilities and provided invaluable insights into the customer service landscape. Understanding what makes customers return has given me a unique perspective as a developer; I now know what to prioritize to ensure user satisfaction. I learned the importance of collaborating with diverse teams and the significance of delivering exceptional service that keeps customers coming back. Additionally, my extensive experience at Walmart has further deepened my understanding of customer needs. Through my commitment to personal growth, I aspire to inspire others by demonstrating that a life that feels extraordinary—and even a bit impossible—is entirely within reach.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="portfolio" class="fade-in">
+        <h2>What's to come in my Portfolio?</h2>
+        <div class="portfolio-container">
+            <!-- Left side (iOS Development) -->
+            <div class="portfolio-item">
+                <img src="Swift.jpg" alt="iOS Development" class="portfolio-image">
+                <div class="portfolio-text">
+                    <h3>Edgar Colmenero's App (iOS Development)</h3>
+                    <p>I'm working on an iOS app with some really cool features that showcase what I can do with Swift. From smooth, easy-to-use interfaces to powerful backend functions, this app highlights my ability to create apps that feel intuitive yet robust.</p>
+                </div>
+            </div>
+    
+            <!-- Right side (Samsung Development) -->
+            <div class="portfolio-item">
+                <img src="Java.jpg" alt="Samsung Development" class="portfolio-image">
+                <div class="portfolio-text">
+                    <h3>Edgar Colmenero's App (Android Development)</h3>
+                    <p>I'm also developing a Android app using Java, focusing on responsiveness and user-friendliness. This project allows me to apply my skills in building apps that run smoothly while offering a seamless experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <p>If you’d like to get in touch, feel free to reach out via the links below:</p>
+        <ul>
+            <li><span class="contact-label">Email:</span> <a href="mailto:EdgarColmenero15@gmail.com" class="contact-link">EdgarColmenero15@gmail.com</a></li>
+            <li><span class="contact-label">LinkedIn:</span> <a href="https://www.linkedin.com/in/edgar-colmenero-385b6125b" target="_blank" class="contact-link">Edgar Colmenero's LinkedIn Profile</a></li>
+            <li><span class="contact-label">Phone:</span> <a href="tel:+18175033500" class="contact-link">+1 (817) 503-3500</a></li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>© 2024 Data Scientist Edgar Colmenero "Never Stay Satisfied" </p>
+    </footer>
+
+    <!-- Add the JavaScript code for scroll-triggered fade-in effect -->
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to add the 'visible' class to elements when they are in view
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                if (isInViewport(el)) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial check to reveal elements in the viewport on page load
+        document.addEventListener('DOMContentLoaded', handleScroll);
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+
+
