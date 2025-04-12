@@ -168,7 +168,6 @@ footer {
     color: #001f3f;
 }
 
-
 /* My Skills and Interests Section */
 #myskills {
     text-align: left;
@@ -209,7 +208,6 @@ footer {
     font-size: 16px;
     color: #f3f3f3;
 }
-
 
 /* Financial Aspirations Section */
 #financial-aspirations {
@@ -572,15 +570,19 @@ footer {
 
 /* Responsive Styles for Vertical (Portrait) Mobile Screens */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-    /* Navigation stays horizontal on a vertical screen */
+    /* Ensure the navigation remains horizontal */
     nav ul {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
+        flex-direction: row;
+        justify-content: space-evenly; /* Evenly distribute five items */
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
     }
     nav ul li {
-        display: inline-block;
-        margin: 0; /* Use minimal margin to keep five items in one row */
+        flex: 1;
+        text-align: center;
+        margin: 0;
     }
     
     /* Reduce section padding for smaller screens */
@@ -588,7 +590,7 @@ footer {
         padding: 15px;
     }
     
-    /* Convert most flex containers to column layout */
+    /* For most flex containers, stack vertically */
     .about-container,
     .skills-container,
     .experience-container,
@@ -599,20 +601,21 @@ footer {
         align-items: center;
     }
     
-    /* Keep Portfolio container in a row for side-by-side layout */
+    /* KEEP the portfolio container as a row */
     .portfolio-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 20px;
     }
     
-    /* Only adjust myportfolio items in width; keep portfolio items as in the default */
-    .myportfolio-item {
-        width: 90%;
-        margin-bottom: 20px;
+    /* Maintain portfolio item width to keep them side by side */
+    .portfolio-item {
+        width: 45%;
     }
     
-    /* Responsive images: allow images to scale and center */
+    /* Responsive images: scale and center */
     #welcome img,
     .college-image,
     .skills-image,
@@ -625,7 +628,7 @@ footer {
         margin: 0 auto;
     }
     
-    /* Center text for containers that were left-aligned */
+    /* Center text for left-aligned containers */
     .about-text,
     .skills-text,
     .portfolio-text,
@@ -633,7 +636,7 @@ footer {
         text-align: center;
     }
     
-    /* Adjust heading and paragraph font sizes for readability */
+    /* Adjust headings and paragraphs for readability */
     h1, h2 {
         font-size: 1.5em;
         margin-bottom: 15px;
@@ -644,7 +647,7 @@ footer {
         margin: 10px;
     }
     
-    /* Adjust banner images: let them occupy more width */
+    /* Adjust banner images for mobile */
     #banner-section {
         flex-direction: column;
     }
