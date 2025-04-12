@@ -515,8 +515,7 @@ footer {
     margin-top: 40px;
 }
 
-/* Portfolio Section */
-
+/* Portfolio Section for myportfolio (if used separately) */
 #myportfolio {
     background-color: #d3d3d3; /* Navy Blue background */
     color: #2c3e50;               /* White text color */
@@ -573,11 +572,15 @@ footer {
 
 /* Responsive Styles for Vertical (Portrait) Mobile Screens */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-    
-    /* Stack navigation items vertically for better spacing */
+    /* Navigation stays horizontal on a vertical screen */
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
     nav ul li {
-        display: block;
-        margin: 5px 0;
+        display: inline-block;
+        margin: 0; /* Use minimal margin to keep five items in one row */
     }
     
     /* Reduce section padding for smaller screens */
@@ -585,10 +588,9 @@ footer {
         padding: 15px;
     }
     
-    /* Convert flex containers to column direction */
+    /* Convert most flex containers to column layout */
     .about-container,
     .skills-container,
-    .portfolio-container,
     .experience-container,
     .social-media-container,
     #banner-section,
@@ -597,8 +599,14 @@ footer {
         align-items: center;
     }
     
-    /* Adjust width of portfolio and related items */
-    .portfolio-item,
+    /* Keep Portfolio container in a row for side-by-side layout */
+    .portfolio-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    /* Only adjust myportfolio items in width; keep portfolio items as in the default */
     .myportfolio-item {
         width: 90%;
         margin-bottom: 20px;
