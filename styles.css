@@ -616,6 +616,20 @@ footer {
         align-items: center;
     }
     
+    /* --- SOCIAL MEDIA ADJUSTMENTS --- */
+    /* Reduce the font size of links and accompanying text */
+    .social-media-item a {
+        font-size: 0.8em;
+    }
+    .social-media-item p {
+        font-size: 0.8em;
+    }
+    /* Optionally reduce the icon size as well */
+    .social-media-item img {
+        width: 50px;
+        height: 50px;
+    }
+    
     /* Responsive images: scale and center */
     #welcome img,
     .college-image,
@@ -656,3 +670,4 @@ footer {
         margin-bottom: 15px;
     }
 }
+
