@@ -119,7 +119,7 @@ footer {
     height: 180px;
     border-radius: 5px;
     margin-right: 20px;
-    border: 3px solid rgb(0, 31, 63, 1);
+    border: 3px solid rgba(0, 31, 63, 1);
     box-shadow: 0 0 10px rgb(255, 255, 255), inset 0 0 5px rgb(255, 255, 255);
 }
 
@@ -225,9 +225,6 @@ footer {
 #financial-aspirations p {
     color: #0A2342; /* Navy blue text */
 }
-
-
-
 
 /* Portfolio Section */
 #portfolio {
@@ -416,9 +413,6 @@ section p {
     margin: 20px auto;
 }
 
-
-
-
 /* Social Media Section */
 #social-media {
     background-color: #d3d3d3; /* Navy Blue background */
@@ -493,7 +487,6 @@ section p {
     transform: translateY(0); /* Moves to its normal position */
 }
 
-
 /* New Banner Section */
 #banner-section {
     width: 100%; /* Full width */
@@ -513,7 +506,6 @@ section p {
     border-bottom: 5px solid #001f3f; /* Optional navy blue border */
 }
 
-
 /* Footer */
 footer {
     background-color: #001f3f;
@@ -522,8 +514,6 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
-
-
 
 /* Portfolio Section */
 
@@ -560,7 +550,7 @@ footer {
     color: #f3f3f3;
 }
 
-/* styles.css */
+/* Additional Reveal Effect (if used) */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -575,9 +565,84 @@ footer {
 .navy-link {
     color: #001f3f;
     text-decoration: none;
-  }
+}
   
-  .navy-link:hover {
+.navy-link:hover {
     text-decoration: underline;
-  }
-  
+}
+
+/* Responsive Styles for Vertical (Portrait) Mobile Screens */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    
+    /* Stack navigation items vertically for better spacing */
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    /* Reduce section padding for smaller screens */
+    section {
+        padding: 15px;
+    }
+    
+    /* Convert flex containers to column direction */
+    .about-container,
+    .skills-container,
+    .portfolio-container,
+    .experience-container,
+    .social-media-container,
+    #banner-section,
+    .myportfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Adjust width of portfolio and related items */
+    .portfolio-item,
+    .myportfolio-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    /* Responsive images: allow images to scale and center */
+    #welcome img,
+    .college-image,
+    .skills-image,
+    .portfolio-image,
+    .banner-image,
+    .experience-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    /* Center text for containers that were left-aligned */
+    .about-text,
+    .skills-text,
+    .portfolio-text,
+    .experience-text {
+        text-align: center;
+    }
+    
+    /* Adjust heading and paragraph font sizes for readability */
+    h1, h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    section p {
+        font-size: 1em;
+        margin: 10px;
+    }
+    
+    /* Adjust banner images: let them occupy more width */
+    #banner-section {
+        flex-direction: column;
+    }
+    
+    .banner-image {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
